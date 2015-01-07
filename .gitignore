@@ -3,7 +3,6 @@
 #################
 
 .Rhistory
-libs/
 *.pydevproject
 .project
 .metadata
