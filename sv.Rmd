@@ -1,0 +1,134 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE, tidy = TRUE)
+```
+
+```{r showcase_setup}
+library(shiny)
+library(apputils)
+pkgs <- snapmeta::sv_pkgs()
+page_urls <- paste0("http://leonawicz.github.io/", pkgs$pkg)
+img_urls <- paste0("assets/img/pkg_icon_", pkgs$pkg, ".svg")
+gh_urls <- paste0("https://github.com/leonawicz/", pkgs$pkg)
+lab <- paste0("<h4>", pkgs$pkg,
+  "<a href=\"", gh_urls, "\" style=\"padding-left:10px;\"><span class=\"fa fa-github fa-lg\"></span></a></h4>")
+lab <- purrr::map(lab, ~HTML(.x))
+titles <- paste0(pkgs$pkg, ifelse(pkgs$type == "sector", "", " package"))
+sv_subtitles <- function(type){
+  switch(type, 
+         "sector"="Sector package", 
+         "functions"="Functions package",
+         "data"="Data package",
+         "apps"="SNAPlications package",
+         "satellite" = "Satellite package")
+}
+subtitles <- purrr::map_chr(pkgs$type, ~sv_subtitles(.x))
+pkg <- pkgs$pkg
+```
+
+<br><br>
+
+# SNAPverse R Packages {.tabset .tabset-fade}
+
+## Sector packages
+
+#### Sector packages are convenient for loading several R packages at once.
+
+```{r showcase_sector}
+idx <- pkgs$type == "sector"
+app_showcase(page_urls[idx], img_urls[idx], pkg[idx], subtitles[idx], lab[idx])
+```
+
+The primary sector package is `snapverse`. It does not load every package in the SNAPverse, but it does load all
+packages from the functions, data, and web apps and docs sectors of the verse.
+`snaplite` loads only functions packages. `snapdata` loads data packages.
+`snapwebs` loads packages containing collections of SNAP Shiny apps, dashboards and other interactive documents.
+
+<br><hr><br>
+
+## Analysis
+
+#### Analyze and graph data from the SNAPverse with functions sector packages.
+
+```{r showcase_functions}
+idx <- pkgs$type == "functions"
+app_showcase(page_urls[idx], img_urls[idx], pkg[idx], subtitles[idx], lab[idx])
+```
+
+The package of most use and interest to a general audience working with snapdata is `snapfuns`.
+The other packages, `snapprep` and `alfresco` cater to internal use and do not contain functions useful for
+analyzing and graphing data sets from SNAPverse data packages. That is specifically what `snapfuns` exists for.
+Users other than the author are safe to ignore the other packages.
+
+<br><hr><br>
+
+## Curated data sets
+
+#### Data sector packages offer curated data sets from the SNAPverse ready for exploration.
+
+```{r showcase_data}
+idx <- pkgs$type == "data"
+app_showcase(page_urls[idx], img_urls[idx], pkg[idx], subtitles[idx], lab[idx])
+```
+
+These data packages offer a range of data sets including spatially explicit maps, vector maps (spatial polygons data frames),
+climate data sets, historical observed wildfire data and projected ALFRESCO wildfire simulation model output, and much more.
+Any of the data in these packages can be loaded and worked with directly in R in whatever ways an R user wishes to interact with the data.
+A convenient and recommended approach, however, is to use functions from the `snapfuns` package to work with these data sets.
+`snapfuns` provides a number of R functions that streamline some of the most common operations users perform when analyzing
+and graphing SNAPverse data.
+
+<br><hr><br>
+
+## SNAPlications
+
+#### Example apps and interactive documents collected in convenient R packages.
+
+```{r showcase_apps}
+idx <- pkgs$type == "apps"
+app_showcase(page_urls[idx], img_urls[idx], pkg[idx], subtitles[idx], lab[idx])
+```
+
+These packages provide direct, offline access to collections of SNAP Shiny apps, dashboards and more.
+Users of SNAPlications may be familiar with the large historical repository of archived R Shiny apps by SNAP as well
+other apps associated and packaged with various distinct SNAP projects.
+
+Packages here like `snapapps` collect several SNAP Shiny apps in one place, fully encapsulated inside an R package.
+This allows users to launch apps locally after simply installing and loading the package in their R session.
+This removes the need to for a user to interact directly with apps hosted on [shinyapps.io](http://shinyapps.io/)
+and avoids the need to download various repositories from GitHub.
+It helps to expose source code for these example apps while providing a convenient and local method for launching 
+and exploring the collection of packaged Shiny apps.
+
+One thing to consider is that some apps use a lot of data, enough data that it is not stored in the app.
+Rather, the data is sourced externally from somewhere like Amazon Web Services.
+In cases like these, a limitation is that these apps are cut down to a tiny subset of the original data
+in order to provide a small self-contained example app that is just like the original hosted online, but will not offer
+access to all the data of the original app.
+
+<br><hr><br>
+
+## Satellites packages
+
+#### R packages that are related to the SNAPverse but not part of the verse core.
+
+```{r showcase_satellite}
+idx <- pkgs$type == "satellite"
+app_showcase(page_urls[idx], img_urls[idx], pkg[idx], subtitles[idx], lab[idx])
+```
+
+Some satellite packages like `snapmeta` and `snapsite` are used only for development of the SNAPverse itself and are not useful to anyone but the author and SNAPverse maintainer.
+These along with others like `snaputils` are also specific to SNAP data and workflows and are not useful outside of a SNAP context.
+The remaining satellite packages, however, are useful to a wide audience of R users and are not SNAP-specific at all.
+They are only considered satellites to the SNAPverse collection of R packages in that core SNAPverse packages may make thorough use of them
+as dependencies.
+These include `rvtable`, `apputils` and `maputils`.
+
+<br><hr><br>
+
+# The SNAPverse at a glance
+
+<p style="text-align:center;"><img src="assets/img/sv_all.svg"></p><br>
