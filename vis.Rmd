@@ -1,0 +1,43 @@
+---
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FALSE, tidy = TRUE)
+```
+
+<br><br>
+
+# 3D Global Data Visualizations {.tabset .tabset-fade}
+
+The video animations on my YouTube channel were prepared using my [mapmate](https://leonawicz.github.io/mapmate/) package.
+
+## Projected climate change
+
+### Historical and projected global temperature anomalies
+
+<iframe src="https://www.youtube.com/embed/xhqEkyJDBho?ecver=2" width="910" height="512" frameborder="0" allowfullscreen></iframe>
+
+## Shiny apps web traffic
+
+### Global UAF/SNAP Shiny Apps web traffic
+
+<iframe src="https://www.youtube.com/embed/uQYR91qixgo?ecver=2" width="910" height="512" frameborder="0" allowfullscreen></iframe>
+
+## Great circle arcs
+
+### Flat map great circle animation example
+
+<iframe src="https://www.youtube.com/embed/yoyIUMvIP3Q?ecver=2" width="910" height="512" frameborder="0" allowfullscreen></iframe>
+
+## Gridded data pathways
+
+### Gridded data cell border pathway traversal
+
+<iframe src="https://www.youtube.com/embed/LMm2FqjdBBY" width="910" height="512" frameborder="0" allowfullscreen></iframe>
+
+## Globe textures with rgl
+
+### Rotating 3D glbe with rgl surface textures
+
+<iframe src="https://www.youtube.com/embed/VsyLrCBs0wQ" width="910" height="512" frameborder="0" allowfullscreen></iframe>
