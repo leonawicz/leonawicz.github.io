@@ -1,0 +1,48 @@
+url: http://leonawicz.github.io/
+
+output:
+  html_document:
+    theme: sandstone
+    include:
+      after_body: footer.html
+    css: styles.css
+    
+name: "Matthew Leonawicz"
+navbar:
+  type: default
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Apps"
+      href: apps.html
+    - text: "Visualizations"
+      href: vis.html
+    - text: "Projects"
+      href: proj.html
+    - text: "R packages"
+      href: pkgs.html
+    - text: "SNAPverse"
+      href: http://leonawicz.github.io/sv.html
+  right:
+    - text: "Online"
+      menu:
+        - text: "GitHub"
+          icon: fa-github fa-lg
+          href: https://github.com/leonawicz
+        - text: "Twitter"
+          icon: fa-twitter fa-lg
+          href: https://twitter.com/leonawicz
+        - text: "LinkedIn"
+          icon: fa-linkedin fa-lg
+          href: https://www.linkedin.com/in/leonawicz
+        - text: "YouTube"
+          icon: fa-youtube fa-lg
+          href: https://www.youtube.com/user/StatisticsWithR
+        - text: "Google+"
+          icon: fa-google-plus fa-lg
+          href: https://plus.google.com/+StatisticsWithR/posts
+        - text: "Blog"
+          icon: fa-wordpress fa-lg
+          href: http://blog.snap.uaf.edu
+    - icon: fa-github fa-lg
+      href: https://github.com/leonawicz/leonawicz.github.io
