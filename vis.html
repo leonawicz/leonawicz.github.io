@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 61px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+
+.section h2 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h3 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h4 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h5 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h6 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="apps.html">Apps</a>
+</li>
+<li>
+  <a href="vis.html">Visualizations</a>
+</li>
+<li>
+  <a href="proj.html">Projects</a>
+</li>
+<li>
+  <a href="pkgs.html">R packages</a>
+</li>
+<li>
+  <a href="http://leonawicz.github.io/sv.html">SNAPverse</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Online
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://github.com/leonawicz">
+        <span class="fa fa-github fa-lg"></span>
+         
+        GitHub
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/leonawicz">
+        <span class="fa fa-twitter fa-lg"></span>
+         
+        Twitter
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/leonawicz">
+        <span class="fa fa-linkedin fa-lg"></span>
+         
+        LinkedIn
+      </a>
+    </li>
+    <li>
+      <a href="https://www.youtube.com/user/StatisticsWithR">
+        <span class="fa fa-youtube fa-lg"></span>
+         
+        YouTube
+      </a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/+StatisticsWithR/posts">
+        <span class="fa fa-google-plus fa-lg"></span>
+         
+        Google+
+      </a>
+    </li>
+    <li>
+      <a href="http://blog.snap.uaf.edu">
+        <span class="fa fa-wordpress fa-lg"></span>
+         
+        Blog
+      </a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="https://github.com/leonawicz/leonawicz.github.io">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br><br></p>
+<div id="d-global-data-visualizations" class="section level1 tabset tabset-fade">
+<h1>3D Global Data Visualizations</h1>
+<p>The video animations on my YouTube channel were prepared using my <a href="https://leonawicz.github.io/mapmate/">mapmate</a> package.</p>
+<div id="projected-climate-change" class="section level2">
+<h2>Projected climate change</h2>
+<div id="historical-and-projected-global-temperature-anomalies" class="section level3">
+<h3>Historical and projected global temperature anomalies</h3>
+<iframe src="https://www.youtube.com/embed/xhqEkyJDBho?ecver=2" width="910" height="512" frameborder="0" allowfullscreen>
+</iframe>
+</div>
+</div>
+<div id="shiny-apps-web-traffic" class="section level2">
+<h2>Shiny apps web traffic</h2>
+<div id="global-uafsnap-shiny-apps-web-traffic" class="section level3">
+<h3>Global UAF/SNAP Shiny Apps web traffic</h3>
+<iframe src="https://www.youtube.com/embed/uQYR91qixgo?ecver=2" width="910" height="512" frameborder="0" allowfullscreen>
+</iframe>
+</div>
+</div>
+<div id="great-circle-arcs" class="section level2">
+<h2>Great circle arcs</h2>
+<div id="flat-map-great-circle-animation-example" class="section level3">
+<h3>Flat map great circle animation example</h3>
+<iframe src="https://www.youtube.com/embed/yoyIUMvIP3Q?ecver=2" width="910" height="512" frameborder="0" allowfullscreen>
+</iframe>
+</div>
+</div>
+<div id="gridded-data-pathways" class="section level2">
+<h2>Gridded data pathways</h2>
+<div id="gridded-data-cell-border-pathway-traversal" class="section level3">
+<h3>Gridded data cell border pathway traversal</h3>
+<iframe src="https://www.youtube.com/embed/LMm2FqjdBBY" width="910" height="512" frameborder="0" allowfullscreen>
+</iframe>
+</div>
+</div>
+<div id="globe-textures-with-rgl" class="section level2">
+<h2>Globe textures with rgl</h2>
+<div id="rotating-3d-glbe-with-rgl-surface-textures" class="section level3">
+<h3>Rotating 3D glbe with rgl surface textures</h3>
+<iframe src="https://www.youtube.com/embed/VsyLrCBs0wQ" width="910" height="512" frameborder="0" allowfullscreen>
+</iframe>
+</div>
+</div>
+</div>
+
+<footer>
+  <br><hr style="height: 2px;"><br>
+  <div class="copyright">
+    <p>Developed by Matthew Leonawicz, Scenarios Network for Alaska and Arctic Planning.</p>
+  </div>
+</footer>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

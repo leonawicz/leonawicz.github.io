@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="styles.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 61px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+
+.section h2 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h3 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h4 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h5 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+.section h6 {
+  padding-top: 66px;
+  margin-top: -66px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="apps.html">Apps</a>
+</li>
+<li>
+  <a href="vis.html">Visualizations</a>
+</li>
+<li>
+  <a href="proj.html">Projects</a>
+</li>
+<li>
+  <a href="pkgs.html">R packages</a>
+</li>
+<li>
+  <a href="http://leonawicz.github.io/sv.html">SNAPverse</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Online
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="https://github.com/leonawicz">
+        <span class="fa fa-github fa-lg"></span>
+         
+        GitHub
+      </a>
+    </li>
+    <li>
+      <a href="https://twitter.com/leonawicz">
+        <span class="fa fa-twitter fa-lg"></span>
+         
+        Twitter
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/in/leonawicz">
+        <span class="fa fa-linkedin fa-lg"></span>
+         
+        LinkedIn
+      </a>
+    </li>
+    <li>
+      <a href="https://www.youtube.com/user/StatisticsWithR">
+        <span class="fa fa-youtube fa-lg"></span>
+         
+        YouTube
+      </a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/+StatisticsWithR/posts">
+        <span class="fa fa-google-plus fa-lg"></span>
+         
+        Google+
+      </a>
+    </li>
+    <li>
+      <a href="http://blog.snap.uaf.edu">
+        <span class="fa fa-wordpress fa-lg"></span>
+         
+        Blog
+      </a>
+    </li>
+  </ul>
+</li>
+<li>
+  <a href="https://github.com/leonawicz/leonawicz.github.io">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br><br></p>
+<div id="r-shiny-apps" class="section level1 tabset tabset-fade">
+<h1>R Shiny Apps</h1>
+<p>The Shiny apps collected here are broken out into sections based roughly on the age of the apps. The older generations of apps date back to when Shiny was in early alpha status. Including them provides a picture of the historical development trajectory and all the changes that occurred along the way.</p>
+<div id="highlighted-apps" class="section level2">
+<h2>Highlighted apps</h2>
+<p>These apps are selected for the collection’s consistent polished look and feel while ranging from small to large and fairly simple to highly complex.</p>
+<div class="row" style="padding: 10px;">
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Climate distributions<a href="https://github.com/leonawicz/dash/tree/master/climdist" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://raw.githubusercontent.com/leonawicz/dash/master/images/_climdist_small.png" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/climdist" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>CMIP5 regional climate</p></h3>
+    <h4><p class="img_hover">Full spatial distributions</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Alaska wildfire projections<a href="https://github.com/leonawicz/jfsp" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://raw.githubusercontent.com/leonawicz/jfsp/master/_jfsp_small.png" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/jfsp-v10" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>Wildfire projections</p></h3>
+    <h4><p class="img_hover">ALFRESCO model output</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Climate model analysis<a href="https://github.com/leonawicz/ar5eval/tree/master/ar5eval" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://raw.githubusercontent.com/leonawicz/ar5eval/master/_ar5eval_small.png" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/ar5eval" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>CMIP5 climate models</p></h3>
+    <h4><p class="img_hover">GCM evaluation results</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Community climate outlooks<a href="https://github.com/ua-snap/shiny-apps/tree/master/cc4liteFinal" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/cc4liteFinal.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/cc4liteFinal" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>Localized projections</p></h3>
+    <h4><p class="img_hover">Alaska & western Canada</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Leaflet and Shiny observers<a href="https://github.com/ua-snap/shiny-apps/tree/master/idocs/ex_leaflet" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/ex_leaflet.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/ex_leaflet" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>Interactive documents</p></h3>
+    <h4><p class="img_hover">Leaflet + Shiny observers</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Northwest Territories<a href="https://github.com/leonawicz/nwtapp" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/nwtapp.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/nwtapp" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>NT climate projections</p></h3>
+    <h4><p class="img_hover">Regional + community level</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+</div>
+</div>
+<div id="older-climate-apps" class="section level2">
+<h2>Older climate apps</h2>
+<p>These apps and those on subsequent tabs are relatively dated compared to the highlighted apps, but all apps are maintained. The last few apps listed below are some of the earliest app I created, circa early 2013. Note that the <code>CMIP3/CMPI5 climate</code> app is not publicly available, but the code is still viewable on Github.</p>
+<div class="row" style="padding: 10px;">
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Alaska sea ice maps<a href="https://github.com/ua-snap/shiny-apps/tree/master/ak_ice_edge" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/ak_ice_edge.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/ak_ice_edge" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>Sea ice edge maps</p></h3>
+    <h4><p class="img_hover">Monthly and decadal extents</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>CMIP3/CMPI5 climate<a href="https://github.com/ua-snap/shiny-apps/tree/master/ar4ar5" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/ar4ar5.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/#" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>Downscaled climate</p></h3>
+    <h4><p class="img_hover">CMIP3/CMPI5 comparisons</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Alaska daily precipitation<a href="https://github.com/ua-snap/shiny-apps/tree/master/ak_daily_precipitation" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/ak_daily_precipitation.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/ak_daily_precipitation" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>Historical dailies</p></h3>
+    <h4><p class="img_hover">Alaska weather stations</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Alaska & Canada climate<a href="https://github.com/ua-snap/shiny-apps/tree/master/akcan_climate" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/akcan_climate.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/akcan_climate" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>Climate projections</p></h3>
+    <h4><p class="img_hover">Alaska & western Canada</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Alaska weather stations<a href="https://github.com/ua-snap/shiny-apps/tree/master/ak_station_cru_eda" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/ak_station_cru_eda.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/ak_station_cru_eda" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>Weather and climate</p></h3>
+    <h4><p class="img_hover">Compare station and CRU</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Sea ice coverage<a href="https://github.com/ua-snap/shiny-apps/tree/master/sea_ice_coverage" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/sea_ice_coverage.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/sea_ice_coverage" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>Sea ice extent</p></h3>
+    <h4><p class="img_hover">Temporal and spatial data</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Sea ice and winds<a href="https://github.com/ua-snap/shiny-apps/tree/master/sea_ice_winds" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/sea_ice_winds.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/sea_ice_winds" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>Sea ice and winds</p></h3>
+    <h4><p class="img_hover">Sea ice and winds</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Temperature and winds<a href="https://github.com/ua-snap/shiny-apps/tree/master/temp_wind_events" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/temp_wind_events.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/temp_wind_events" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>Temperature and winds</p></h3>
+    <h4><p class="img_hover">Compare extreme thresholds</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+</div>
+</div>
+<div id="assorted-examples" class="section level2">
+<h2>Assorted examples</h2>
+<p>Example apps here offer a somewhat random assortment of content. Note that the <code>ALFRESCO launcher</code> Shiny app for running SNAP’s projected wildfire simulations model is viewable, but cannot actually be used to run the model online, so the app does not actually do anything here.</p>
+<div class="row" style="padding: 10px;">
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Random Forest example<a href="https://github.com/ua-snap/shiny-apps/tree/master/random_forest_example" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/random_forest_example.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/random_forest_example" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>Random Forest in Shiny</p></h3>
+    <h4><p class="img_hover">Minimal example</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>GBM example<a href="https://github.com/ua-snap/shiny-apps/tree/master/gbm_example" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/gbm_example.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/gbm_example" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>GBM in Shiny</p></h3>
+    <h4><p class="img_hover">Minimal example</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>plot3D examples<a href="https://github.com/ua-snap/shiny-apps/tree/master/plot3D" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/plot3D.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/plot3D" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>plot3D and rgl examples</p></h3>
+    <h4><p class="img_hover">Explore 3D plots in Shiny</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Monty Hall<a href="https://github.com/ua-snap/shiny-apps/tree/master/monty_hall" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/monty_hall.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/monty_hall" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>Generalized Monty Hall</p></h3>
+    <h4><p class="img_hover">Minimal example</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Tree rings<a href="https://github.com/ua-snap/shiny-apps/tree/master/tree_rings" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/tree_rings.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/tree_rings" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>Tree rings data sample</p></h3>
+    <h4><p class="img_hover">Simple app example</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>ALFRESCO launcher<a href="https://github.com/ua-snap/shiny-apps/tree/master/run_alfresco" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/run_alfresco.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/#" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>Shiny ALFRESCO launcher</p></h3>
+    <h4><p class="img_hover">Inactive but explorable</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+</div>
+</div>
+<div id="random-variables" class="section level2">
+<h2>Random variables</h2>
+<p>The four versions of this app are some of the oldest and were used to demonstrate an app development trajectory of increasing complexity at a time when Shiny was in early development.</p>
+<div class="row" style="padding: 10px;">
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Random variables v1<a href="https://github.com/ua-snap/shiny-apps/tree/master/RV_distributions" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/RV_distributions.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/RV_distributions" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>RV distributions</p></h3>
+    <h4><p class="img_hover">Version 1</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Random variables v2<a href="https://github.com/ua-snap/shiny-apps/tree/master/RV_distributionsV2" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/RV_distributionsV2.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/RV_distributionsV2" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>RV distributions</p></h3>
+    <h4><p class="img_hover">Version 2</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Random variables v3<a href="https://github.com/ua-snap/shiny-apps/tree/master/RV_distributionsV3" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/RV_distributionsV3.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/RV_distributionsV3" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>RV distributions</p></h3>
+    <h4><p class="img_hover">Version 3</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
+<h4>Random variables v4<a href="https://github.com/ua-snap/shiny-apps/tree/master/RV_distributionsV4" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<div class="img_link_wrap">
+    <img class="img_app" src="https://github.com/ua-snap/shiny-apps/raw/master/_images/small/RV_distributionsV4.jpg" style="padding:NULL;" width="100%" height="200"/>
+    <a href="https://uasnap.shinyapps.io/RV_distributionsV4" style="color:white;" target="_blank"
+    <div class="img_hover_layer">
+    <div class="img_hover">
+    <h3><p>RV distributions</p></h3>
+    <h4><p class="img_hover">Version 4</p></h4>
+    </div>
+    </div>
+    </a>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+  <br><hr style="height: 2px;"><br>
+  <div class="copyright">
+    <p>Developed by Matthew Leonawicz, Scenarios Network for Alaska and Arctic Planning.</p>
+  </div>
+</footer>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
