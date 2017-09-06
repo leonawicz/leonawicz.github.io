@@ -7,7 +7,8 @@ output:
       after_body: footer.html
     css: styles.css
     
-name: "Matthew Leonawicz"
+name: "leonawicz"
+output_dir: "."
 navbar:
   type: default
   left:
