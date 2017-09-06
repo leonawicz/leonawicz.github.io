@@ -111,7 +111,7 @@ access to all the data of the original app.
 
 <br><hr><br>
 
-## Satellites packages
+## Satellite packages
 
 #### R packages that are related to the SNAPverse but not part of the verse core.
 
