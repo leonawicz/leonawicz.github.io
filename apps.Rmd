@@ -33,7 +33,7 @@ app_showcase(snapps_urls()[1:6], snapps_urls("img")[1:6], snapps_titles("title")
 ## Older climate apps
 
 These apps and those on subsequent tabs are relatively dated compared to the highlighted apps, but all apps are maintained. The last few apps listed below are some of the earliest app I created, circa early 2013.
-Note that the `CMIP3/CMPI5 climate` app is not publicly available, but the code is still viewable on Github.
+Note that the `CMIP3/CMPI5 climate` app is not publicly available, but the code is still viewable on GitHub.
 
 ```{r showcase_olderclim}
 idx <- c(7:10, 16, 21:23)

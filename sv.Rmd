@@ -58,7 +58,7 @@ idx <- pkgs$type == "functions"
 app_showcase(page_urls[idx], img_urls[idx], pkg[idx], subtitles[idx], lab[idx])
 ```
 
-The package of most use and interest to a general audience working with snapdata is `snapfuns`.
+The package of most use and interest to a general audience working with SNAP data is `snapfuns`.
 The other packages, `snapprep` and `alfresco` cater to internal use and do not contain functions useful for
 analyzing and graphing data sets from SNAPverse data packages. That is specifically what `snapfuns` exists for.
 Users other than the author are safe to ignore the other packages.
@@ -98,7 +98,7 @@ other apps associated and packaged with various distinct SNAP projects.
 
 Packages here like `snapapps` collect several SNAP Shiny apps in one place, fully encapsulated inside an R package.
 This allows users to launch apps locally after simply installing and loading the package in their R session.
-This removes the need to for a user to interact directly with apps hosted on [shinyapps.io](http://shinyapps.io/)
+This removes the need for a user to interact directly with apps hosted on [shinyapps.io](http://shinyapps.io/)
 and avoids the need to download various repositories from GitHub.
 It helps to expose source code for these example apps while providing a convenient and local method for launching 
 and exploring the collection of packaged Shiny apps.
