@@ -9,7 +9,6 @@ output:
     
 name: "leonawicz"
 output_dir: "."
-exclude: ["README.md"]
 navbar:
   type: default
   left:
