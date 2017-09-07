@@ -16,17 +16,8 @@ gh_urls <- paste0("https://github.com/leonawicz/", pkgs$pkg)
 lab <- paste0("<h4>", pkgs$pkg,
   "<a href=\"", gh_urls, "\" style=\"padding-left:10px;\"><span class=\"fa fa-github fa-lg\"></span></a></h4>")
 lab <- purrr::map(lab, ~HTML(.x))
-titles <- paste0(pkgs$pkg, ifelse(pkgs$type == "sector", "", " package"))
-sv_subtitles <- function(type){
-  switch(type, 
-         "sector"="Sector package", 
-         "functions"="Functions package",
-         "data"="Data package",
-         "apps"="SNAPlications package",
-         "satellite" = "Satellite package")
-}
-subtitles <- purrr::map_chr(pkgs$type, ~sv_subtitles(.x))
-pkg <- pkgs$pkg
+pkg <- snapmeta::pkg_titles("title")
+subtitles <- snapmeta::pkg_titles("sub")
 ```
 
 <br><br>
