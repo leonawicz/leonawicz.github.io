@@ -24,6 +24,10 @@ subtitles <- snapmeta::pkg_titles("sub")
 
 # SNAPverse R Packages {.tabset .tabset-fade}
 
+The SNAPverse is a collection of R packages that work in tandem in the context of data sets and statistical analysis workflows pertaining to the Scenarios Network for Alaska and Arctic Planning at the University of Alaska Fairbanks. Packages are broken out by sector.
+Sector packages make it easy to install and load multiple packages from different sectors of the SNAPverse.
+The different sectors include functions, data sets, web applications and interactive documents, and satellite packages that are outside the core of the verse. Below are links to all SNAPverse member packages, followed by a simplified diagram of the verse.
+
 ## Sector packages
 
 #### Sector packages are convenient for loading several R packages at once.
