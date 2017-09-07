@@ -42,7 +42,7 @@ packages from the functions, data, and web apps and docs sectors of the verse.
 `snaplite` loads only functions packages. `snapdata` loads data packages.
 `snapwebs` loads packages containing collections of SNAP Shiny apps, dashboards and other interactive documents.
 
-<br><hr><br>
+<hr>
 
 ## Analysis
 
@@ -58,7 +58,7 @@ The other packages, `snapprep` and `alfresco` cater to internal use and do not c
 analyzing and graphing data sets from SNAPverse data packages. That is specifically what `snapfuns` exists for.
 Users other than the author are safe to ignore the other packages.
 
-<br><hr><br>
+<hr>
 
 ## Curated data sets
 
@@ -76,7 +76,7 @@ A convenient and recommended approach, however, is to use functions from the `sn
 `snapfuns` provides a number of R functions that streamline some of the most common operations users perform when analyzing
 and graphing SNAPverse data.
 
-<br><hr><br>
+<hr>
 
 ## SNAPlications
 
@@ -104,7 +104,7 @@ In cases like these, a limitation is that these apps are cut down to a tiny subs
 in order to provide a small self-contained example app that is just like the original hosted online, but will not offer
 access to all the data of the original app.
 
-<br><hr><br>
+<hr>
 
 ## Satellite packages
 
@@ -122,7 +122,7 @@ They are only considered satellites to the SNAPverse collection of R packages in
 as dependencies.
 These include `rvtable`, `apputils` and `maputils`.
 
-<br><hr><br>
+<hr>
 
 # The SNAPverse at a glance
 
