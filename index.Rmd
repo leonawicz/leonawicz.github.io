@@ -33,7 +33,7 @@ titles <- c("R Shiny Apps", "Data visualizations", "SNAP R Projects",
             "Selected R packages", "SNAPverse R packages", "SNAP Tech Blog")
 subs <- c("Explore the collection", "Static graphics and animations", "A glimpse into the day-to-day", 
           "GitHub fast. CRAN strong.", "Traverse the verse...", "R, Shiny, and more")
-padding <- c(rep("0px", 3), "10px", "10px", "0px")
-app_showcase(app_urls, img_urls, titles, subs, labels, img_padding = padding)
+padding <- paste0("padding:", c(rep("0px", 3), "10px", "10px", "0px"), ";")
+app_showcase(app_urls, img_urls, titles, subs, labels, img_style = padding, new_window = FALSE)
 knitr::opts_chunk$set(echo = TRUE)
 ```
