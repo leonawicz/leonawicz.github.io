@@ -34,7 +34,7 @@ The different sectors include functions, data sets, web applications and interac
 
 ```{r showcase_sector}
 idx <- pkgs$type == "sector"
-app_showcase(page_urls[idx], img_urls[idx], pkg[idx], subtitles[idx], lab[idx])
+app_showcase(page_urls[idx], img_urls[idx], pkg[idx], subtitles[idx], lab[idx], new_window = FALSE)
 ```
 
 The primary sector package is `snapverse`. It does not load every package in the SNAPverse, but it does load all
@@ -50,7 +50,7 @@ packages from the functions, data, and web apps and docs sectors of the verse.
 
 ```{r showcase_functions}
 idx <- pkgs$type == "functions"
-app_showcase(page_urls[idx], img_urls[idx], pkg[idx], subtitles[idx], lab[idx])
+app_showcase(page_urls[idx], img_urls[idx], pkg[idx], subtitles[idx], lab[idx], new_window = FALSE)
 ```
 
 The package of most use and interest to a general audience working with SNAP data is `snapfuns`.
@@ -66,7 +66,7 @@ Users other than the author are safe to ignore the other packages.
 
 ```{r showcase_data}
 idx <- pkgs$type == "data"
-app_showcase(page_urls[idx], img_urls[idx], pkg[idx], subtitles[idx], lab[idx])
+app_showcase(page_urls[idx], img_urls[idx], pkg[idx], subtitles[idx], lab[idx], new_window = FALSE)
 ```
 
 These data packages offer a range of data sets including spatially explicit maps, vector maps (spatial polygons data frames),
@@ -84,7 +84,7 @@ and graphing SNAPverse data.
 
 ```{r showcase_apps}
 idx <- pkgs$type == "apps"
-app_showcase(page_urls[idx], img_urls[idx], pkg[idx], subtitles[idx], lab[idx])
+app_showcase(page_urls[idx], img_urls[idx], pkg[idx], subtitles[idx], lab[idx], new_window = FALSE)
 ```
 
 These packages provide direct, offline access to collections of SNAP Shiny apps, dashboards and more.
@@ -112,7 +112,7 @@ access to all the data of the original app.
 
 ```{r showcase_satellite}
 idx <- pkgs$type == "satellite"
-app_showcase(page_urls[idx], img_urls[idx], pkg[idx], subtitles[idx], lab[idx])
+app_showcase(page_urls[idx], img_urls[idx], pkg[idx], subtitles[idx], lab[idx], new_window = FALSE)
 ```
 
 Some satellite packages like `snapmeta` and `snapsite` are used only for development of the SNAPverse itself and are not useful to anyone but the author and SNAPverse maintainer.

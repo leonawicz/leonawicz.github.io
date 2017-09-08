@@ -35,5 +35,5 @@ labs <- purrr::map(labs, ~HTML(.x))
 titles <- c("Community charts", "Extractions/estimations", "Climate downscaling",
             "Landscape flammability", "Land carbon outputs", "Assorted QC code")
 subtitles <- rep("Project documentation", 6)
-app_showcase(page_urls, img_urls, titles, subtitles, labs)
+app_showcase(page_urls, img_urls, titles, subtitles, labs, new_window = FALSE)
 ```
