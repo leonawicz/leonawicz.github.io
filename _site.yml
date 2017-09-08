@@ -5,8 +5,9 @@ output:
     theme: sandstone
     include:
       after_body: footer.html
+      in_header: ga.html
     css: styles.css
-    
+       
 name: "leonawicz"
 output_dir: "."
 navbar:
