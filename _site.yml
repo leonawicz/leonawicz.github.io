@@ -1,4 +1,4 @@
-url: http://leonawicz.github.io/
+url: https://leonawicz.github.io/
 
 output:
   html_document:
@@ -24,7 +24,7 @@ navbar:
     - text: "R packages"
       href: pkgs.html
     - text: "SNAPverse"
-      href: http://leonawicz.github.io/sv.html
+      href: https://leonawicz.github.io/sv.html
   right:
     - text: "Online"
       menu:
