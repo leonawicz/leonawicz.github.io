@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FA
 library(shiny)
 library(apputils)
 page_urls <- paste0(
-  "http://leonawicz.github.io/", 
+  "https://leonawicz.github.io/", 
   c("CommCharts4", "DataExtraction", "Downscaling", "Flammability", "LandCarbon", "SNAPQAQC"))
 img_urls <- paste0(
   "https://github.com/leonawicz/",

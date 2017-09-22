@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FA
 library(shiny)
 library(apputils)
 pkgs <- snapmeta::sv_pkgs()
-page_urls <- paste0("http://leonawicz.github.io/", pkgs$pkg)
+page_urls <- paste0("https://leonawicz.github.io/", pkgs$pkg)
 img_urls <- paste0("assets/img/pkg_icon_", pkgs$pkg, ".svg")
 gh_urls <- paste0("https://github.com/leonawicz/", pkgs$pkg)
 lab <- paste0("<h4>", pkgs$pkg,
