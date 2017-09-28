@@ -17,8 +17,8 @@ the historical development trajectory and all the changes that occurred along th
 library(shiny)
 library(apputils)
 library(snaputils)
-labs <- paste0("<h4>", snapps_titles("label"),
-  "<a href=\"", snapps_urls("gh"), "\" style=\"padding-left:10px;\"><span class=\"fa fa-github fa-lg\"></span></a></h4>")
+labs <- paste0("<h4>", snapp_titles("label"),
+  "<a href=\"", snapp_urls("gh"), "\" style=\"padding-left:10px;\"><span class=\"fa fa-github fa-lg\"></span></a></h4>")
 labs <- purrr::map(labs, ~HTML(.x))
 ```
 
@@ -27,7 +27,7 @@ labs <- purrr::map(labs, ~HTML(.x))
 These apps are selected for the collection's consistent polished look and feel while ranging from small to large and fairly simple to highly complex.
 
 ```{r showcase_highlighted}
-app_showcase(snapps_urls()[1:6], snapps_urls("img")[1:6], snapps_titles("title")[1:6], snapps_titles("sub")[1:6], labs[1:6], new_window = FALSE)
+app_showcase(snapp_urls()[1:6], snapp_urls("img")[1:6], snapp_titles("title")[1:6], snapp_titles("sub")[1:6], labs[1:6], new_window = FALSE)
 ```
 
 ## Older climate apps
@@ -37,7 +37,7 @@ Note that the `CMIP3/CMPI5 climate` app is not publicly available, but the code 
 
 ```{r showcase_olderclim}
 idx <- c(7:10, 16, 21:23)
-app_showcase(snapps_urls()[idx], snapps_urls("img")[idx], snapps_titles("title")[idx], snapps_titles("sub")[idx], labs[idx], new_window = FALSE)
+app_showcase(snapp_urls()[idx], snapp_urls("img")[idx], snapp_titles("title")[idx], snapp_titles("sub")[idx], labs[idx], new_window = FALSE)
 ```
 
 ## Assorted examples
@@ -48,7 +48,7 @@ but cannot actually be used to run the model online, so the app does not actuall
 
 ```{r showcase_assorted}
 idx <- c(14, 11, 13, 12, 24, 15)
-app_showcase(snapps_urls()[idx], snapps_urls("img")[idx], snapps_titles("title")[idx], snapps_titles("sub")[idx], labs[idx], new_window = FALSE)
+app_showcase(snapp_urls()[idx], snapp_urls("img")[idx], snapp_titles("title")[idx], snapp_titles("sub")[idx], labs[idx], new_window = FALSE)
 ```
 
 ## Random variables
@@ -57,5 +57,5 @@ The four versions of this app are some of the oldest and were used to demonstrat
 
 ```{r showcase_rv}
 idx <- 17:20
-app_showcase(snapps_urls()[idx], snapps_urls("img")[idx], snapps_titles("title")[idx], snapps_titles("sub")[idx], labs[idx], new_window = FALSE)
+app_showcase(snapp_urls()[idx], snapp_urls("img")[idx], snapp_titles("title")[idx], snapp_titles("sub")[idx], labs[idx], new_window = FALSE)
 ```
