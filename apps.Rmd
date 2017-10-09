@@ -27,7 +27,7 @@ labs <- purrr::map(labs, ~HTML(.x))
 These apps are selected for the collection's consistent polished look and feel while ranging from small to large and fairly simple to highly complex.
 
 ```{r showcase_highlighted}
-app_showcase(snapp_urls()[1:6], snapp_urls("img")[1:6], snapp_titles("title")[1:6], snapp_titles("sub")[1:6], labs[1:6], new_window = FALSE)
+app_showcase(snapp_urls()[2:7], snapp_urls("img")[2:7], snapp_titles("title")[2:7], snapp_titles("sub")[2:7], labs[2:7], new_window = FALSE)
 ```
 
 ## Older climate apps
@@ -36,7 +36,7 @@ These apps and those on subsequent tabs are relatively dated compared to the hig
 Note that the `CMIP3/CMPI5 climate` app is not publicly available, but the code is still viewable on GitHub.
 
 ```{r showcase_olderclim}
-idx <- c(7:10, 16, 21:23)
+idx <- c(8:11, 17, 22:24)
 app_showcase(snapp_urls()[idx], snapp_urls("img")[idx], snapp_titles("title")[idx], snapp_titles("sub")[idx], labs[idx], new_window = FALSE)
 ```
 
@@ -47,15 +47,15 @@ Note that the `ALFRESCO launcher` Shiny app for running SNAP's projected wildfir
 but cannot actually be used to run the model online, so the app does not actually do anything here.
 
 ```{r showcase_assorted}
-idx <- c(14, 11, 13, 12, 24, 15)
+idx <- c(15, 12, 14, 13, 25, 16)
 app_showcase(snapp_urls()[idx], snapp_urls("img")[idx], snapp_titles("title")[idx], snapp_titles("sub")[idx], labs[idx], new_window = FALSE)
 ```
 
 ## Random variables
 
-The four versions of this app are some of the oldest and were used to demonstrate an app development trajectory of increasing complexity at a time when Shiny was in early development.
+The first app listed is the current implemenation of my Distributions of Random Variables app (2017). The other four versions of this app are some of the oldest apps and were used to demonstrate an app development trajectory of increasing complexity at a time when Shiny was in alpha development in early 2013.
 
 ```{r showcase_rv}
-idx <- 17:20
+idx <- c(1, 18:21)
 app_showcase(snapp_urls()[idx], snapp_urls("img")[idx], snapp_titles("title")[idx], snapp_titles("sub")[idx], labs[idx], new_window = FALSE)
 ```
