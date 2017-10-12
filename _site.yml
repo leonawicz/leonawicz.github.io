@@ -44,7 +44,7 @@ navbar:
           icon: fa-google-plus fa-lg
           href: https://plus.google.com/+StatisticsWithR/posts
         - text: "Blog"
-          icon: fa-wordpress fa-lg
-          href: http://blog.snap.uaf.edu
+          icon: fa-pencil-square-o fa-lg
+          href: https://leonawicz.github.io/blog/
     - icon: fa-github fa-lg
       href: https://github.com/leonawicz/leonawicz.github.io
