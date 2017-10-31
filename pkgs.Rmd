@@ -13,14 +13,14 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, error = FA
 ```{r showcase, echo = FALSE}
 library(shiny)
 library(apputils)
-pkgs <- c("mapmate", "rvtable", "apputils", "rockchain")
+pkgs <- c("apputils", "mapmate", "memery", "rockchain", "rvtable")
 page_urls <- paste0("https://leonawicz.github.io/", pkgs)
 #img_urls <- paste0("https://github.com/leonawicz/", pkgs, "/man/figures/pkg_icon.svg")
-img_urls <- rep("assets/img/Rlogo.svg", 4)
+img_urls <- rep("assets/img/Rlogo.svg", 5)
 gh_urls <- paste0("https://github.com/leonawicz/", pkgs)
 lab <- paste0("<h4>", pkgs,
   "<a href=\"", gh_urls, "\" style=\"padding-left:10px;\"><span class=\"fa fa-github fa-lg\"></span></a></h4>")
 lab <- purrr::map(lab, ~HTML(.x))
-subtitles <- c("3D globe animations", "Random variable tables", "Shiny app utilities", "Blockchain integration")
+subtitles <- c("Shiny app utilities", "3D globe animations", "Memes for data nerds", "Blockchain integration", "Random variable tables")
 app_showcase(page_urls, img_urls, pkgs, subtitles, lab, img_style = "padding:10px;", new_window = FALSE)
 ```
