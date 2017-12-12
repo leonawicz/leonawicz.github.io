@@ -45,7 +45,7 @@ if (window.hljs) {
   hljs.configure({languages: []});
   hljs.initHighlightingOnLoad();
   if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlightingOnLoad(); }, 0);
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
   }
 }
 </script>
@@ -352,13 +352,13 @@ $(document).ready(function () {
 <h4>Analyze and graph data from the SNAPverse with functions sector packages.</h4>
 <div class="row" style="padding: 10px;">
 <div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
-<h4>snapfuns<a href="https://github.com/leonawicz/snapfuns" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
+<h4>snapstat<a href="https://github.com/leonawicz/snapstat" style="padding-left:10px;"><span class="fa fa-github fa-lg"></span></a></h4>
 <div class="img_link_wrap">
-    <img class="img_app" src="assets/img/pkg_icon_snapfuns.svg" width="100%" height="200"/>
-    <a href="https://leonawicz.github.io/snapfuns" style="color:white;" 
+    <img class="img_app" src="assets/img/pkg_icon_snapstat.svg" width="100%" height="200"/>
+    <a href="https://leonawicz.github.io/snapstat" style="color:white;" 
     <div class="img_hover_layer">
     <div class="img_hover">
-    <h3><p>Work with SNAP data</p></h3>
+    <h3><p>Analyze SNAP data</p></h3>
     <h4><p class="img_hover">Functions for users</p></h4>
     </div>
     </div>
@@ -651,6 +651,7 @@ $(document).ready(function () {
 <li><a href="https://leonawicz.github.io/snaplocs/"><code>snaplocs</code></a>:  <a href="https://travis-ci.org/leonawicz/snaplocs"><img src="https://travis-ci.org/leonawicz/snaplocs.svg?branch=master" alt="Travis build status" /></a> <a href="https://ci.appveyor.com/project/leonawicz/snaplocs"><img src="https://ci.appveyor.com/api/projects/status/github/leonawicz/snaplocs?branch=master&amp;svg=true" alt="AppVeyor Build Status" /></a> <a href="https://codecov.io/github/leonawicz/snaplocs?branch=master"><img src="https://codecov.io/gh/leonawicz/snaplocs/branch/master/graph/badge.svg" alt="Coverage status" /></a></li>
 <li><a href="https://leonawicz.github.io/alfresco/"><code>alfresco</code></a>:  <a href="https://travis-ci.org/leonawicz/alfresco"><img src="https://travis-ci.org/leonawicz/alfresco.svg?branch=master" alt="Travis build status" /></a> <a href="https://ci.appveyor.com/project/leonawicz/alfresco"><img src="https://ci.appveyor.com/api/projects/status/github/leonawicz/alfresco?branch=master&amp;svg=true" alt="AppVeyor Build Status" /></a> <a href="https://codecov.io/github/leonawicz/alfresco?branch=master"><img src="https://codecov.io/gh/leonawicz/alfresco/branch/master/graph/badge.svg" alt="Coverage status" /></a></li>
 <li><a href="https://leonawicz.github.io/snapprep/"><code>snapprep</code></a>:  <a href="https://travis-ci.org/leonawicz/snapprep"><img src="https://travis-ci.org/leonawicz/snapprep.svg?branch=master" alt="Travis build status" /></a> <a href="https://ci.appveyor.com/project/leonawicz/snapprep"><img src="https://ci.appveyor.com/api/projects/status/github/leonawicz/snapprep?branch=master&amp;svg=true" alt="AppVeyor Build Status" /></a> <a href="https://codecov.io/github/leonawicz/snapprep?branch=master"><img src="https://codecov.io/gh/leonawicz/snapprep/branch/master/graph/badge.svg" alt="Coverage status" /></a></li>
+<li><a href="https://leonawicz.github.io/snapclim/"><code>snapclim</code></a>:  <a href="https://travis-ci.org/leonawicz/snapclim"><img src="https://travis-ci.org/leonawicz/snapclim.svg?branch=master" alt="Travis build status" /></a> <a href="https://ci.appveyor.com/project/leonawicz/snapclim"><img src="https://ci.appveyor.com/api/projects/status/github/leonawicz/snapclim?branch=master&amp;svg=true" alt="AppVeyor Build Status" /></a> <a href="https://codecov.io/github/leonawicz/snapclim?branch=master"><img src="https://codecov.io/gh/leonawicz/snapclim/branch/master/graph/badge.svg" alt="Coverage status" /></a></li>
 <li><a href="https://leonawicz.github.io/snappoly/"><code>snappoly</code></a>:  <a href="https://travis-ci.org/leonawicz/snappoly"><img src="https://travis-ci.org/leonawicz/snappoly.svg?branch=master" alt="Travis build status" /></a> <a href="https://ci.appveyor.com/project/leonawicz/snappoly"><img src="https://ci.appveyor.com/api/projects/status/github/leonawicz/snappoly?branch=master&amp;svg=true" alt="AppVeyor Build Status" /></a> <a href="https://codecov.io/github/leonawicz/snappoly?branch=master"><img src="https://codecov.io/gh/leonawicz/snappoly/branch/master/graph/badge.svg" alt="Coverage status" /></a></li>
 <li><a href="https://leonawicz.github.io/snapgrid/"><code>snapgrid</code></a>:  <a href="https://travis-ci.org/leonawicz/snapgrid"><img src="https://travis-ci.org/leonawicz/snapgrid.svg?branch=master" alt="Travis build status" /></a> <a href="https://ci.appveyor.com/project/leonawicz/snapgrid"><img src="https://ci.appveyor.com/api/projects/status/github/leonawicz/snapgrid?branch=master&amp;svg=true" alt="AppVeyor Build Status" /></a> <a href="https://codecov.io/github/leonawicz/snapgrid?branch=master"><img src="https://codecov.io/gh/leonawicz/snapgrid/branch/master/graph/badge.svg" alt="Coverage status" /></a></li>
 <li><a href="https://leonawicz.github.io/snapapps/"><code>snapapps</code></a>:  <a href="https://travis-ci.org/leonawicz/snapapps"><img src="https://travis-ci.org/leonawicz/snapapps.svg?branch=master" alt="Travis build status" /></a> <a href="https://ci.appveyor.com/project/leonawicz/snapapps"><img src="https://ci.appveyor.com/api/projects/status/github/leonawicz/snapapps?branch=master&amp;svg=true" alt="AppVeyor Build Status" /></a> <a href="https://codecov.io/github/leonawicz/snapapps?branch=master"><img src="https://codecov.io/gh/leonawicz/snapapps/branch/master/graph/badge.svg" alt="Coverage status" /></a></li>
