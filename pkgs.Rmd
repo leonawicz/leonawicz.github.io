@@ -15,6 +15,7 @@ library(shiny)
 library(apputils)
 pkgs <- c("epubr", "mapmate", "memery", "rockchain", "rtrek", "rvtable", "tabr", "trekfont")
 page_urls <- paste0("https://leonawicz.github.io/", pkgs)
+page_urls[pkgs == "trekfont"] <- "https://github.com/leonawicz/trekfont"
 img_urls <- paste0("https://github.com/leonawicz/", pkgs, "/blob/master/data-raw/", 
                    ifelse(pkgs == "rtrek", "images/rtrek", pkgs), ".png?raw=true")
 gh_urls <- paste0("https://github.com/leonawicz/", pkgs)
