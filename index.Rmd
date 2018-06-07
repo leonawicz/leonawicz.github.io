@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE)
 
 ### Statistician | R Developer <a href="http://snap.uaf.edu" target="_blank"><img src="./assets/img/SNAP_acronym_color.svg" alt="SNAP" width=80  style="margin-bottom:5px;"></a>
 
-<img src="./assets/img/my_photo2_400x400.jpg" width=300 style="float:right; margin-left:20px; margin-bottom:20px;">
+<img src="./assets/img/ml400w.jpg" width=200 style="float:right; margin-left:10px; margin-bottom:10px;">
 
 I am the lead statistical analyst for Scenarios Network for Alaska & Arctic Planning at the University of Alaska Fairbanks.
 I love programming in R. Much of my work revolves around high performance statistical computing, web application development, data visualization, and dynamic reporting.

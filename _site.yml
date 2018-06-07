@@ -2,7 +2,7 @@ url: https://leonawicz.github.io/
 
 output:
   html_document:
-    theme: sandstone
+    theme: cosmo
     include:
       after_body: footer.html
       in_header: ga.html
@@ -11,18 +11,15 @@ output:
 name: "leonawicz"
 output_dir: "."
 navbar:
-  type: default
   left:
     - text: "Home"
       href: index.html
+    - text: "R packages"
+      href: pkgs.html
     - text: "Apps"
       href: apps.html
     - text: "Visualizations"
       href: vis.html
-    - text: "Projects"
-      href: proj.html
-    - text: "R packages"
-      href: pkgs.html
     - text: "SNAPverse"
       href: https://leonawicz.github.io/sv.html
   right:
