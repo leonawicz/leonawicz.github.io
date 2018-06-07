@@ -23,6 +23,6 @@ lab <- paste0("<h4>", pkgs,
   "<a href=\"", gh_urls, "\" style=\"padding-left:10px;\"><span class=\"fa fa-github fa-lg\"></span></a></h4>")
 lab <- purrr::map(lab, ~HTML(.x))
 subtitles <- c("Tidy EPUB data", "Globe animation", "For data nerds", "Blockchain in R", 
-               "All things Star Trek", "Density frames", "Guitar tabs", "Star Trek fonts")
+               "R for Star Trek", "Density frames", "Guitar tabs", "Map tiles", "Star Trek fonts")
 app_showcase(page_urls, img_urls, pkgs, subtitles, lab, min_width = 150, max_width = 150, img_style = "padding:5px;", new_window = FALSE)
 ```

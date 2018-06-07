@@ -26,12 +26,12 @@ When not neck deep in R code, I can generally be found supervising others in ana
 ```{r showcase, echo = FALSE}
 library(shiny)
 library(apputils)
-labels <- lapply(c("Shiny", "Visualizations", "Projects", "R packages", "The SNAPverse", "Blog"), h4)
-app_urls <- c(paste0(c("apps", "vis", "proj", "pkgs", "sv"), ".html"), "blog")
-img_urls <- paste0("assets/img/", c("apps.jpg", "datavis_r_geonet3.jpg", "proj.jpg", "Rlogo.svg", "snap_symbol.svg", "blog.jpg"))
-titles <- c("R Shiny Apps", "Data visualizations", "SNAP R Projects", 
+labels <- lapply(c("Shiny", "Visualizations", "R packages", "The SNAPverse", "Blog"), h4)
+app_urls <- c(paste0(c("apps", "vis", "pkgs", "sv"), ".html"), "blog")
+img_urls <- paste0("assets/img/", c("apps.jpg", "datavis_r_geonet3.jpg", "Rlogo.svg", "snap_symbol.svg", "blog.jpg"))
+titles <- c("R Shiny Apps", "Data visualizations", 
             "Selected R packages", "SNAPverse R packages", "If Time, Then Blog")
-subs <- c("Explore the collection", "Static graphics and animations", "A glimpse into the day-to-day", 
+subs <- c("Explore the collection", "Static graphics and animations", 
           "GitHub fast. CRAN strong.", "Traverse the verse...", "My R and Shiny posts")
 padding <- paste0("padding:", c(rep("0px", 3), "10px", "10px", "0px"), ";")
 app_showcase(app_urls, img_urls, titles, subs, labels, img_style = padding, new_window = FALSE)
