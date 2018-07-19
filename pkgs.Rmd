@@ -15,10 +15,15 @@ library(shiny)
 library(apputils)
 pkgs <- c("epubr", "mapmate", "memery", "rockchain", "rtrek", "rvtable", "tabr", "tiler", "trekfont")
 page_urls <- paste0("https://leonawicz.github.io/", pkgs)
+page_urls[pkgs == "epubr"] <- "https://github.com/ropensci/epubr"
 page_urls[pkgs == "trekfont"] <- "https://github.com/leonawicz/trekfont"
 img_urls <- paste0("https://github.com/leonawicz/", pkgs, "/blob/master/data-raw/", 
                    ifelse(pkgs == "rtrek", "images/rtrek", pkgs), ".png?raw=true")
 gh_urls <- paste0("https://github.com/leonawicz/", pkgs)
+
+img_urls[pkgs == "epubr"] <- "https://github.com/ropensci/epubr/blob/master/data-raw/epubr.png?raw=true"
+gh_urls[pkgs == "epubr"] <- "https://github.com/ropensci/epubr"
+
 lab <- paste0("<h4>", pkgs,
   "<a href=\"", gh_urls, "\" style=\"padding-left:10px;\"><span class=\"fa fa-github fa-lg\"></span></a></h4>")
 lab <- purrr::map(lab, ~HTML(.x))
