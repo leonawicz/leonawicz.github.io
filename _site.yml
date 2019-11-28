@@ -2,10 +2,6 @@ url: https://leonawicz.github.io/
 
 output:
   html_document:
-    theme: cosmo
-    include:
-      after_body: footer.html
-      in_header: ga.html
     css: styles.css
        
 name: "leonawicz"
@@ -14,16 +10,8 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "R packages"
-      href: pkgs.html
-    - text: "Apps"
-      href: apps.html
-    - text: "Visualizations"
-      href: vis.html
-    - text: "SNAPverse"
-      href: https://leonawicz.github.io/sv.html
   right:
-    - text: "Online"
+    - text: "Links"
       menu:
         - text: "GitHub"
           icon: fa-github fa-lg
@@ -37,9 +25,6 @@ navbar:
         - text: "YouTube"
           icon: fa-youtube fa-lg
           href: https://www.youtube.com/user/StatisticsWithR
-        - text: "Google+"
-          icon: fa-google-plus fa-lg
-          href: https://plus.google.com/+StatisticsWithR/posts
         - text: "Blog"
           icon: fa-pencil-square-o fa-lg
           href: https://leonawicz.github.io/blog/

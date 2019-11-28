@@ -7,34 +7,24 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
-<title></title>
+<title>index.utf8.md</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.0.13/css/fa-svg-with-js.css" rel="stylesheet" />
-<script src="site_libs/font-awesome-5.0.13/js/fontawesome-all.min.js"></script>
-<script src="site_libs/font-awesome-5.0.13/js/fa-v4-shims.min.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-46129458-3', 'auto');
-  ga('send', 'pageview');
-
-</script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -83,9 +73,7 @@ h6 {
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -99,7 +87,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -109,6 +96,9 @@ img {
 }
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -124,7 +114,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -144,6 +133,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -165,19 +191,73 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -197,23 +277,11 @@ $(document).ready(function () {
         <li>
   <a href="index.html">Home</a>
 </li>
-<li>
-  <a href="pkgs.html">R packages</a>
-</li>
-<li>
-  <a href="apps.html">Apps</a>
-</li>
-<li>
-  <a href="vis.html">Visualizations</a>
-</li>
-<li>
-  <a href="https://leonawicz.github.io/sv.html">SNAPverse</a>
-</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Online
+    Links
      
     <span class="caret"></span>
   </a>
@@ -247,13 +315,6 @@ $(document).ready(function () {
       </a>
     </li>
     <li>
-      <a href="https://plus.google.com/+StatisticsWithR/posts">
-        <span class="fa fa-google-plus fa-lg"></span>
-         
-        Google+
-      </a>
-    </li>
-    <li>
       <a href="https://leonawicz.github.io/blog/">
         <span class="fa fa-pencil-square-o fa-lg"></span>
          
@@ -282,89 +343,43 @@ $(document).ready(function () {
 
 
 <p><br><br></p>
-<div id="matthew-leonawicz" class="section level1">
-<h1>Matthew Leonawicz <img src="assets/img/ml400w.jpg" width=200 style="float:right; margin-left:10px; margin-bottom:10px;"></h1>
-<div id="r-developer-data-scientist-statistician" class="section level3">
-<h3>R Developer | Data Scientist | Statistician <a href="https://www.esource.com/about-e-source" target="_blank"><img src="assets/img/esource_logo.png" alt="E Source" width=80  style="margin-bottom:5px;"></a></h3>
-<p>I am a software developer and data scientist with E Source. I especially love programming in R, including high performance statistical computing, web application development, data visualization, and dynamic reporting. I enjoy developing R Shiny apps and creating informative, beautiful graphics.</p>
-<p>I also enjoy networking with other R developers, data analysts, researchers, and useRs around the globe. While I don’t have a lot of time to <a href="https://leonawicz.github.io/blog/">blog</a>, I post more frequent updates on <a href="https://twitter.com/leonawicz">Twitter</a>. Some of my R code is available on <a href="https://github.com/leonawicz">Github</a>.</p>
-<p><br><br></p>
-<div class="row" style="padding: 10px;">
-<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
-<h4>Shiny</h4>
-<div class="img_link_wrap">
-    <img class="img_app" src="assets/img/apps.jpg" style="padding:0px;" width="100%" height="200"/>
-    <a href="apps.html" style="color:white;" 
-    <div class="img_hover_layer">
-    <div class="img_hover">
-    <h3><p>R Shiny Apps</p></h3>
-    <h4><p class="img_hover">Explore the collection</p></h4>
-    </div>
-    </div>
-    </a>
-</div>
-<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
-<h4>Visualizations</h4>
-<div class="img_link_wrap">
-    <img class="img_app" src="assets/img/datavis_r_geonet3.jpg" style="padding:0px;" width="100%" height="200"/>
-    <a href="vis.html" style="color:white;" 
-    <div class="img_hover_layer">
-    <div class="img_hover">
-    <h3><p>Data visualizations</p></h3>
-    <h4><p class="img_hover">Static graphics and animations</p></h4>
-    </div>
-    </div>
-    </a>
-</div>
-<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
-<h4>R packages</h4>
-<div class="img_link_wrap">
-    <img class="img_app" src="assets/img/Rlogo.svg" style="padding:10px;" width="100%" height="200"/>
-    <a href="pkgs.html" style="color:white;" 
-    <div class="img_hover_layer">
-    <div class="img_hover">
-    <h3><p>Selected R packages</p></h3>
-    <h4><p class="img_hover">GitHub fast. CRAN strong.</p></h4>
-    </div>
-    </div>
-    </a>
-</div>
-<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
-<h4>The SNAPverse</h4>
-<div class="img_link_wrap">
-    <img class="img_app" src="assets/img/snap_symbol.svg" style="padding:10px;" width="100%" height="200"/>
-    <a href="sv.html" style="color:white;" 
-    <div class="img_hover_layer">
-    <div class="img_hover">
-    <h3><p>SNAPverse R packages</p></h3>
-    <h4><p class="img_hover">Traverse the verse...</p></h4>
-    </div>
-    </div>
-    </a>
-</div>
-<div class="col-sm-4" style="min-width: 300px; max-width: 400px; padding:5px;">
-<h4>Blog</h4>
-<div class="img_link_wrap">
-    <img class="img_app" src="assets/img/blog.jpg" style="padding:0px;" width="100%" height="200"/>
-    <a href="blog" style="color:white;" 
-    <div class="img_hover_layer">
-    <div class="img_hover">
-    <h3><p>I think, therefore I R</p></h3>
-    <h4><p class="img_hover">My R and Shiny posts</p></h4>
-    </div>
-    </div>
-    </a>
+<div id="matthew-leonawicz" class="section level2">
+<h2>Matthew Leonawicz <img src="assets/img/ml400w.jpg" width=200 style="float:right; margin-left:10px; margin-bottom:10px;"></h2>
+<div id="r-developer-data-scientist" class="section level4">
+<h4>R Developer | Data Scientist <a href="https://www.esource.com/about-e-source" target="_blank"><img src="assets/img/esource_logo.png" alt="E Source" width=80  style="margin-bottom:5px;"></a></h4>
+<p>I’m a software developer and data scientist. I’m also a member of <a href="https://ropensci.org/">ROpenSci</a>. I’ve published several peer-reviewed R packages to CRAN as well as three with ROpenSci focusing on textual manipulation, energy data retrieval, and geospatial map tile generation.</p>
+<p>My work over the years has focused on high performance statistical computing, climate science research, web application development, data visualization, and dynamic reporting. I enjoy developing R Shiny apps and creating informative, beautiful graphics.</p>
+<p>I also enjoy networking with other R developers, data analysts, researchers, and useRs around the globe. Some of my R code is available on <a href="https://github.com/leonawicz">Github</a>. I post updates on <a href="https://twitter.com/leonawicz">Twitter</a> occasionally. I’m most interested in development of tools that enhance the R ecosystem for data science, improve workflows and productivity, and assist with reproducible research.</p>
+<p><br/></p>
 </div>
 </div>
+<div id="r-packages" class="section level2">
+<h2>R packages</h2>
+<div id="ropensci-and-cran" class="section level3">
+<h3>ROpenSci and CRAN</h3>
+<ul>
+<li><a href="https://github.com/ropensci/eia">eia</a>: API wrapper for the US Energy Information Administration.</li>
+<li><a href="https://github.com/ropensci/epubr">epubr</a>: Tidy parsing of text from EPUB files.</li>
+<li><a href="https://github.com/ropensci/tiler">tiler</a>: Geospatial and non-geospatial map tile generation.</li>
+</ul>
+</div>
+<div id="cran" class="section level3">
+<h3>CRAN</h3>
+<ul>
+<li><a href="https://github.com/leonawicz/tabr">tabr</a>: Notation-driven music data analysis and transcription.</li>
+<li><a href="https://github.com/leonawicz/imgpalr">imgpalr</a>: Derive color palettes from images.</li>
+<li><a href="https://github.com/leonawicz/memery">memery</a>: Blend data visualizations and memes.</li>
+</ul>
+<p>And just for fun, but also data analysis, the <code>trekverse</code>.</p>
+<ul>
+<li><a href="https://github.com/leonawicz/rtrek">rtrek</a>: All things Stark Trek for R. Data APIs and more.</li>
+<li>lcars: TBA soon!</li>
+<li><a href="https://github.com/leonawicz/trekcolors">trekcolors</a>: Star Trek color palettes.</li>
+<li><a href="https://github.com/leonawicz/trekfont">trekfont</a>: Star Trek fonts.</li>
+</ul>
 </div>
 </div>
 
-<footer>
-  <br><hr style="height: 2px;"><br>
-  <div class="copyright">
-    <p>Developed by Matthew Leonawicz, E Source.</p>
-  </div>
-</footer>
 
 
 
@@ -382,6 +397,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
