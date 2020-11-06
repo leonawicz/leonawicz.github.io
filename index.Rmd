@@ -10,14 +10,12 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE)
 
 ## Matthew Leonawicz <img src="./assets/img/ml400w.jpg" width=200 style="float:right; margin-left:10px; margin-bottom:10px;">
 
-#### R Developer | Data Scientist <a href="https://www.esource.com/about-e-source" target="_blank"><img src="./assets/img/esource_logo.png" alt="E Source" width=80  style="margin-bottom:5px;"></a>
+#### R Developer <a href="https://www.esource.com/about-e-source" target="_blank"><img src="./assets/img/esource_logo.png" alt="E Source" width=80  style="margin-bottom:5px;"></a>
 
 
-I'm a software developer and data scientist. I'm also a member of [ROpenSci](https://ropensci.org/). I've published several peer-reviewed R packages to CRAN as well as three with ROpenSci focusing on textual manipulation, energy data retrieval, and geospatial map tile generation.
+I'm an R developer with E Source. I'm also a member of [ROpenSci](https://ropensci.org/). I've published several peer-reviewed R packages to CRAN as well as three with ROpenSci focusing on textual manipulation, energy data retrieval, and geospatial map tile generation.
 
-My work over the years has focused on high performance statistical computing, climate science research, web application development, data visualization, and dynamic reporting. I enjoy developing R Shiny apps and creating informative, beautiful graphics.
-
-I also enjoy networking with other R developers, data analysts, researchers, and useRs around the globe. Some of my R code is available on [Github](https://github.com/leonawicz). I post updates on [Twitter](https://twitter.com/leonawicz) occasionally. I'm most interested in development of tools that enhance the R ecosystem for data science, improve workflows and productivity, and assist with reproducible research.
+I enjoy R package development, Shiny development, data visualization, and dynamic reporting. I also enjoy networking with other R developers and useRs. I'm most interested in development of tools that enhance the R ecosystem, improve workflows and productivity, and assist with reproducible research.
 
 <br/>
 
@@ -33,11 +31,12 @@ I also enjoy networking with other R developers, data analysts, researchers, and
 
 * [tabr](https://github.com/leonawicz/tabr): Notation-driven music data analysis and transcription.
 * [imgpalr](https://github.com/leonawicz/imgpalr): Derive color palettes from images.
+* [legocolors](https://github.com/leonawicz/legocolors): Lego color conventions and mapping functions.
 * [memery](https://github.com/leonawicz/memery): Blend data visualizations and memes.
 
 And just for fun, but also data analysis, the `trekverse`.
 
 * [rtrek](https://github.com/leonawicz/rtrek): All things Stark Trek for R. Data APIs and more.
-* lcars: TBA soon!
+* [lcars](https://github.com/leonawicz/lcars): LCARS aesthetic for Shiny.
 * [trekcolors](https://github.com/leonawicz/trekcolors): Star Trek color palettes.
 * [trekfont](https://github.com/leonawicz/trekfont): Star Trek fonts.
