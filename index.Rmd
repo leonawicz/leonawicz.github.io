@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE)
 
 <br><br>
 
-## Matthew Leonawicz <img src="./assets/img/ml400w.jpg" width=200 style="float:right; margin-left:10px; margin-bottom:10px;">
+## Matthew Leonawicz
 
 #### R Developer <a href="https://www.esource.com/about-e-source" target="_blank"><img src="./assets/img/esource_logo.png" alt="E Source" width=80  style="margin-bottom:5px;"></a>
 
