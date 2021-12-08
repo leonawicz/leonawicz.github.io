@@ -10,12 +10,10 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE)
 
 ## Matthew Leonawicz
 
-#### R Developer <a href="https://www.esource.com/about-e-source" target="_blank"><img src="./assets/img/esource_logo.png" alt="E Source" width=80  style="margin-bottom:5px;"></a>
+#### R and Shiny developer | Software developer
 
 
-I'm an R developer with E Source. I'm also a member of [ROpenSci](https://ropensci.org/). I've published several peer-reviewed R packages to CRAN as well as three with ROpenSci focusing on textual manipulation, energy data retrieval, and geospatial map tile generation.
-
-I enjoy R package development, Shiny development, data visualization, and dynamic reporting. I also enjoy networking with other R developers and useRs. I'm most interested in development of tools that enhance the R ecosystem, improve workflows and productivity, and assist with reproducible research.
+I enjoy R package development, Shiny development, data visualization, and dynamic reporting. I'm a member of [ROpenSci](https://ropensci.org/). I've published several peer-reviewed R packages to CRAN as well as three with ROpenSci focusing on textual manipulation, energy data retrieval, and geospatial map tile generation. I also enjoy networking with other R developers and useRs. I'm most interested in development of tools that enhance the R ecosystem, improve workflows and productivity, and assist with reproducible research.
 
 <br/>
 
